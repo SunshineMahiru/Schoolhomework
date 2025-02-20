@@ -22,16 +22,16 @@ void bubbleSort(int *arr, int n) {
 
 int main(void) {
     int n;
-    printf("ÇëÊäÈëÊı×Ö½øĞĞËæ»úÉú³ÉÅÅĞò(max 1000000): ");
+    printf("è¯·è¾“å…¥æ•°å­—è¿›è¡Œéšæœºç”Ÿæˆæ’åº(max 1000000): ");
     scanf("%d", &n);
     if (n <= 0 || n > COUNT) {
-        printf("·Ç·¨ÊäÈë£¬ÊıÖµÓ¦¸ÃÔÚ1µ½1000000Ö®¼ä\n");
+        printf("éæ³•è¾“å…¥ï¼Œæ•°å€¼åº”è¯¥åœ¨1åˆ°1000000ä¹‹é—´\n");
         return -1;
     }
 
     int *data = (int *)malloc(n * sizeof(int));
     if (data == NULL) {
-        perror("ÄÚ´æ²»¹»À²");
+        perror("å†…å­˜ä¸å¤Ÿå•¦");
         return -1;
     }
 
@@ -40,9 +40,9 @@ int main(void) {
         data[i] = rand() % 100000 + 1;
     }
 
-    FILE *fp = fopen("C:\\Users\\Mahiru Shiina\\Desktop\\test\\data.txt", "w");
+    FILE *fp = fopen("C:\\Users\\admin\\Desktop\\test\\data.txt", "w");
     if (fp == NULL) {
-        perror("ÎÄ¼ş´ò²»¿ªÅ¶");
+        perror("æ–‡ä»¶æ‰“ä¸å¼€å“¦");
         free(data);
         return -1;
     }
